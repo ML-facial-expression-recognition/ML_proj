@@ -27,8 +27,6 @@ def rt_rec():
         ft = np.asarray(face_feature.get_face_feature_from_camera(img,detector,predictor))
         if ft.shape[0] >0:
             for i in range(ft.shape[0]):
-                print(ft.shape)
-                print(np.mat(ft[i,:]).shape)
                 res = clf.predict(np.mat(ft[i,:]).A)
                 img = cv2.putText(img, expression[int(res)],(40,40),cv2.FONT_HERSHEY_SIMPLEX,3,(255,0,0),2)
 
