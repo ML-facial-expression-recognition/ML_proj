@@ -3,7 +3,7 @@ import face_feature
 import cv2
 import dlib
 import numpy as np
-
+from imutils import face_utils
 def get_race_feature(path, detector, predictor):
     img = cv2.imread(path)
     res = get_race_feature_from_camera(img, detector, predictor)

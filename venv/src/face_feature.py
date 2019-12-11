@@ -97,6 +97,11 @@ def get_hsv_in_tri(img, pts):
     v = 0
 
     for pt in pts:
+        try:
+            temp = hsv_img[pt[0],pt[1]]
+        except:
+            print(pt)
+            pt = [0,0]
         h = h + hsv_img[pt[0],pt[1],0]
         s = s + hsv_img[pt[0],pt[1],1]
         v = v + hsv_img[pt[0],pt[1],2]
