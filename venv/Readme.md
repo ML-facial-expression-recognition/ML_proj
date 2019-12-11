@@ -25,59 +25,60 @@ the most important feature that we will focus on.
 
 #### 2.1.1 get_train_data
 
-a. tranverse all images
+- a. tranverse all images
 
-b. save features into feature.npy file, and format as below:
-    | label | features |
-    |   0   |   ...    |
-    |   1   |   ...    |
-    |  ...  |   ...    |
+- b. save features into feature.npy file, and format as below:
+     | label | features |
+     | ----- | -------- |
+     |   0   |   ...    |
+     |   1   |   ...    |
+     |  ...  |   ...    |
             ⬇️
     label : multiclass {0,1,...};
     features : get_face_feature in face_feature.py
 
 #### 2.1.2 face_feature
 
-a. get all features from path or camera
+- a. get all features from path or camera
 
-b. The fuction get_detector() and get_predictor() are dependent on 
+- b. The fuction get_detector() and get_predictor() are dependent on 
 dlib library
 
-c. help function used on reading images from path
+- c. help function used on reading images from path
 
-d.help function used on reading images from camera
+- d.help function used on reading images from camera
 
 #### 2.1.3 race_feature
 
-a. extract features of different skin colors from camera capture
+- a. extract features of different skin colors from camera capture
 
-b. capture features from camera frame
+- b. capture features from camera frame
 
 ### 2.2 Training Data
 
 #### 2.2.1 get_train_data
 
-a. get training data features from face_feature()
+- a. get training data features from face_feature()
 
-b. get race data features from race_feature()
+- b. get race data features from race_feature()
 
 #### 2.2.2 training_data
 
-a. training data according to the input strategies
+- a. training data according to the input strategies
 
-b. calculating error rate on testing data according to 
+- b. calculating error rate on testing data according to 
 classifier and PCA method
 
-c. randomly choose 5/6 as training data and rest 1/6 as 
+- c. randomly choose 5/6 as training data and rest 1/6 as 
 testing data
 
 ### 2.3 Main functino: real time recognition from camera
 
 #### 2.3.1 rt.rec
 
-a. get trained model
+- a. get trained model
 
-b. get real time result from camera
+- b. get real time result from camera
 
 ## Reference
 Documents of ML project: facial expression detection
